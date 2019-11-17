@@ -9,12 +9,12 @@
 
 
 def fibo_gen():
-    for n in range(2, 102):
+    for n in range(2, 17):
         result = 1
         for el in range(1, n):
             result = result * el
         yield result
 
-gen = fibo_gen()
-for el in range(1, 16):
-    print(next(gen))
+
+for el in fibo_gen():
+    print(el)
