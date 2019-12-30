@@ -9,10 +9,15 @@ from sys import argv
 
 
 def zp(argv):
+    if len(argv) != 4:
+        return print(f'Введены некорректные аргументы')
     script_name, hour, rate, prize = argv
-    hour = int(hour)
-    rate = int(rate)
-    prize = int(prize)
+    try:
+        hour = int(hour)
+        rate = int(rate)
+        prize = int(prize)
+    except ValueError:
+        return print('Введите целые числа')
     return print(f'Заработная плата составила {hour * rate + prize}')
 
 

@@ -8,11 +8,11 @@
 from functools import reduce
 from pprint import pprint
 
-list = [x for x in range(100, 1001) if not x % 2]
-pprint(f'Список четных чисел от 100 до 1000 включая границы \n {list}')
+my_list = [x for x in range(100, 1001) if not x % 2]
+pprint(f'Список четных чисел от 100 до 1000 включая границы \n {my_list}')
 
-list = [5, 7, 14, 11]
-print(f'\nНовый массив, для вычисления произведения его чисел\n{list}')
-for idx, el in enumerate(list):
-    prod = reduce(lambda a, b: a * b, list[:idx + 1])
+my_list = [5, 7, 14, 11]
+print(f'\nНовый массив, для вычисления произведения его чисел\n{my_list}')
+for idx, el in enumerate(my_list):
+    prod = reduce(lambda a, b: a * b, my_list[:idx + 1])
     print(f'Произведение первых {idx + 1} элементов равно {prod}')
